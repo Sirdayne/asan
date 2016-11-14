@@ -1,0 +1,30 @@
+/* mobile HEIGHT fixes */
+@media only screen and (max-height : 1500px) {
+    
+}
+
+@media only screen and (max-height : 700px) {
+
+}
+
+
+/* mobile WIDTH fixes */
+@media only screen and (max-width : 2000px) {
+   
+} 
+
+@media only screen and (max-width : 800px) {
+    
+}
+
+@media only screen and (max-width : 750px) { 
+   
+}
+
+@media only screen and (max-width : 450px) { 
+   
+}
+    
+@media only screen and (max-width : 350px) { 
+  
+}
