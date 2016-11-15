@@ -8,9 +8,7 @@ $(document).ready(function(){
     
     console.log(slideIndex);
     
-    console.log(numSlides);
-    
-    $('.h1-slide').eq( slideIndex ).fadeIn('fast');
+    //$('.h1-slide').eq( slideIndex ).fadeIn('fast');
     
     $('.h-left').css('z-index','1');
     $('.h-right').css('z-index','1');
@@ -29,6 +27,7 @@ $(document).ready(function(){
             
             $('.h-left').eq( slideIndex ).addClass('slideOutUp');  
             $('.h-right').eq( slideIndex ).addClass('slideOutDown'); 
+           
             
             $('.h-left').css('z-index','1');
             $('.h-right').css('z-index','1');
@@ -39,24 +38,34 @@ $(document).ready(function(){
             $('.h-left').eq( slideIndex ).css('z-index','2');  
             $('.h-right').eq( slideIndex ).css('z-index','2'); 
             
-            $('.h1-slide').fadeOut('fast');
-            $('.h1-slide').eq( slideIndex ).fadeIn('fast');
+            //$('.h1-slide').fadeOut('fast');
+            //$('.h1-slide').eq( slideIndex ).fadeIn('fast');
             
-            $('.h-left').eq( counterFix - 1 ).removeClass('slideOutUp slideOutDown');
-            $('.h-right').eq( counterFix - 1).removeClass('slideOutUp slideOutDown');
+            $('.h-left').eq( counterFix - 1 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
+            $('.h-right').eq( counterFix - 1).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
             
-            $('.h-left').eq( 0 ).removeClass('slideOutUp slideOutDown');
-            $('.h-right').eq( 0 ).removeClass('slideOutUp slideOutDown');
+            $('.h-left').eq( 0 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
+            $('.h-right').eq( 0 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
             
+            
+            $('.h-box').hide();  
+            
+            $('.h-box').eq( slideIndex ).show();  
              
         }
         else{
             
-            $('.h-left').removeClass('slideOutUp slideOutDown');
-            $('.h-right').removeClass('slideOutUp slideOutDown');
+            $('.h-left').removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
+            $('.h-right').removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
             
-            $('.h-left').eq( slideIndex ).addClass('slideOutUp');  
-            $('.h-right').eq( slideIndex ).addClass('slideOutDown'); 
+            if ((slideIndex % 2) != 1){
+                $('.h-left').eq( slideIndex ).addClass('slideOutUp');  
+                $('.h-right').eq( slideIndex ).addClass('slideOutDown'); 
+            }
+            else{
+                $('.h-left').eq( slideIndex ).addClass('slideOutLeft');  
+                $('.h-right').eq( slideIndex ).addClass('slideOutRight'); 
+            }
 
             console.log(slideIndex);
             console.log('else');
@@ -70,8 +79,12 @@ $(document).ready(function(){
             $('.h-left').eq( slideIndex ).css('z-index','2');  
             $('.h-right').eq( slideIndex ).css('z-index','2'); 
             
-            $('.h1-slide').fadeOut('fast');
-            $('.h1-slide').eq( slideIndex ).fadeIn('fast');
+            $('.h-box').hide();  
+            
+            $('.h-box').eq( slideIndex ).show();  
+            
+            //$('.h1-slide').fadeOut('fast');
+            //$('.h1-slide').eq( slideIndex ).fadeIn('fast');
         }
     });
     
@@ -94,25 +107,33 @@ $(document).ready(function(){
             $('.h-left').eq( slideIndex ).css('z-index','2');  
             $('.h-right').eq( slideIndex ).css('z-index','2');  
             
-            $('.h1-slide').fadeOut('fast');
-            $('.h1-slide').eq( slideIndex ).fadeIn('fast');
+            //$('.h1-slide').fadeOut('fast');
+            //$('.h1-slide').eq( slideIndex ).fadeIn('fast');
             
-            $('.h-left').eq( numSlides - 2 ).removeClass('slideOutUp slideOutDown');
-            $('.h-right').eq( numSlides - 2 ).removeClass('slideOutUp slideOutDown');
+            $('.h-left').eq( numSlides - 2 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
+            $('.h-right').eq( numSlides - 2 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
             
-            $('.h-left').eq( numSlides + 1 ).removeClass('slideOutUp slideOutDown');
-            $('.h-right').eq( numSlides + 1 ).removeClass('slideOutUp slideOutDown');
-            console.log(slideIndex);
+            $('.h-left').eq( numSlides + 1 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
+            $('.h-right').eq( numSlides + 1 ).removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight');
             
+            $('.h-box').hide();  
+            
+            $('.h-box').eq( slideIndex ).show();  
              
         }
         else{
             
-            $('.h-left').removeClass('slideOutUp slideOutDown');
-            $('.h-right').removeClass('slideOutUp slideOutDown');
+            $('.h-left').removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight slideOutLeft slideOutRight');
+            $('.h-right').removeClass('slideOutUp slideOutDown slideOutLeft slideOutRight slideOutLeft slideOutRight');
             
-            $('.h-left').eq( slideIndex ).addClass('slideOutUp');  
-            $('.h-right').eq( slideIndex ).addClass('slideOutDown'); 
+            if ((slideIndex % 2) != 1){
+                $('.h-left').eq( slideIndex ).addClass('slideOutUp');  
+                $('.h-right').eq( slideIndex ).addClass('slideOutDown'); 
+            }
+            else{
+                $('.h-left').eq( slideIndex ).addClass('slideOutLeft');  
+                $('.h-right').eq( slideIndex ).addClass('slideOutRight'); 
+            }
 
             console.log(slideIndex);
             console.log('else');
@@ -126,13 +147,41 @@ $(document).ready(function(){
             $('.h-left').eq( slideIndex ).css('z-index','2');   
             $('.h-right').eq( slideIndex ).css('z-index','2'); 
             
-            $('.h1-slide').fadeOut('fast');
-            $('.h1-slide').eq( slideIndex ).fadeIn('fast');
+            $('.h-box').hide();  
+            
+            $('.h-box').eq( slideIndex ).show();  
+            
+            //$('.h1-slide').fadeOut('fast');
+            //$('.h1-slide').eq( slideIndex ).fadeIn('fast');
         }
     });
     
+    $('.h-1').show();
     
+    $('.s-box').click(function() {
+        
+        var indexBox = $(".s-box").index(this);
+        var leN = $('.f-box').length; 
+        
+        $('.f-box').eq( indexBox ).removeClass('slideOutLeft').addClass('slideInRight').css('z-index','4');
+        
+        for (var i = 0; i < leN; i++) {
+            if( i != indexBox ){
+                $('.f-box').eq( i ).removeClass('slideInRight').addClass('slideOutLeft').css('z-index','3');
+            }
+        }
+
+        $('.s-box').addClass('s-active');
+        $('.s-3-left').addClass('s-active');
+        $('.s-fix').addClass('s-active');
+        
+    });
     
+    $('.s-close').click(function() {
+        $('.s-box').removeClass('s-active');
+        $('.s-3-left').removeClass('s-active');
+        $('.s-fix').removeClass('s-active');
+    });
     
     if ($(window).width() > 800) {
         var imgHeight = $('.service-consult').height();

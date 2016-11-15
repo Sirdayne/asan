@@ -6,17 +6,29 @@ body{
     float: left;
     width: 100%;
     height: calc(100vh - 111px);
+    min-height: 700px;
     background: #c7e8f4;
     
     position: relative;
     overflow: hidden;
 }
+.h-box, .h-1, .h-2, .h-3, .h-4, .h-5{
+    float: left;
+    width: 100%;
+    height: inherit;
+    min-height: 700px;
+    display: none;
+}
+
 .h-main{
     position: relative;
-    top: 100px;
+    top: calc(55% - 300px);
     width: 200px;
     left: calc(50% - 100px);
     z-index: 5;
+}
+.h-main img{
+    width: inherit;
 }
 .h-txt-1, .h-txt-2{
     position: absolute;
@@ -28,19 +40,16 @@ body{
     z-index: 4;
 }
 .h-txt-1{
-    top: 150px;
+    top: calc(55% - 250px);
     right: calc(50% + 75px);
 }
 .h-txt-2{
-    top: 200px;
+    top: calc(55% - 150px);
     left: calc(50% + 65px);
-}
-.h-main img{
-    width: inherit;
 }
 .sl-img-1, .sl-img-2{
     position: absolute;
-    top: 50px;
+    top: 8%;
     
     height: 75px;
     width: 75px;
@@ -62,7 +71,7 @@ body{
 
 .header h1{
     position: absolute;
-    bottom: 200px;
+    bottom: 20%;
     left: calc(50% - 250px);
     font-size: 16px;
     line-height: 16px;
@@ -77,7 +86,7 @@ body{
 }
 .h-btn-1{
     position: absolute;
-    bottom: 100px;
+    bottom: 8%;
     left: calc(50% - 250px);
     outline: none;
     border: none;
@@ -94,7 +103,7 @@ body{
 }
 .h-btn-2{
     position: absolute;
-    bottom: 100px;
+    bottom: 8%;
     right: calc(50% - 250px);
     outline: none;
     border: none;
@@ -118,7 +127,7 @@ body{
     width: 100%;
     height: inherit;
 }
-.h1-slide{
+.slide{
     position: absolute;
     top: 25%;
     left: 0;
@@ -137,6 +146,7 @@ body{
     left: 0;
     width: 50%;
     height: inherit;
+    min-height: 700px;
 }
 .h-right{
     position: absolute;
@@ -144,6 +154,7 @@ body{
     left: 50%;
     width: 50%;
     height: inherit;
+    min-height: 700px;
 }
 .h-arrow-left{
     position: absolute;
@@ -220,8 +231,10 @@ body{
     float: left;
     width: 100%;
     background: #fc8479;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    height: 50vh;
+    min-height: 250px;
+    padding-top: 30vh;
+    padding-bottom: 20vh;
 }
 .s-2-left, .s-2-right{
     float: left;
@@ -250,15 +263,208 @@ body{
     color: #fff;
 }
 .s-2-left img, .s-2-right p{
-    width: 400px;
+    width: 50%;
+    min-width: 400px;
+}
+.s-3{
+    float: left;
+    width: 100%;
+    height: 100vh;
+    min-height: 750px;
+    background: #fff;
+}
+.s-3-left{
+    float: left;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: .7s linear;
+    transition: .7s linear;
+}
+.s-3-left.s-active{
+    width: 50%;
+}
+.s-box{
+    float: left;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+    -webkit-transition: .7s linear;
+    transition: .7s linear;
+}
+.sc-1{
+    background: url(../img/s3-1.png) center center no-repeat;
+    background-size: cover;
+}
+.sc-2{
+    background: url(../img/s3-2.png) center center no-repeat;
+    background-size: cover;
+}
+.sc-3{
+    background: url(../img/s3-3.png) center center no-repeat;
+    background-size: cover;
+}
+.sc-4{
+    background: url(../img/s3-4.png) center center no-repeat;
+    background-size: cover;
 }
 
+.sc-1.s-active{
+    background: url(../img/s3-1-a.png) center center no-repeat;
+    background-size: cover;
+}
+.sc-2.s-active{
+    background: url(../img/s3-2-a.png) center center no-repeat;
+    background-size: cover;
+}
+.sc-3.s-active{
+    background: url(../img/s3-3-a.png) center center no-repeat;
+    background-size: cover;
+}
+.sc-4.s-active{
+    background: url(../img/s3-4-a.png) center center no-repeat;
+    background-size: cover;
+}
+.s-fix{
+    float: left;
+    height: 100%;
+    width: 0%;
+    background: #eccfad;
+    
+    -webkit-transition: .7s linear;
+    transition: .7s linear;
+    
+    position: relative;
+    z-index: 1;
+    
+    overflow: hidden;
+}
+.s-fix.s-active{
+    display: block;
+    
+    width: 50%;
+}
+.f-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+}
+.b-1{
+    background: #eccfad;
+}
+.b-2{
+    background: #eccfad;
+}
+.b-3{
+    background: #eccfad;
+}
+.b-4{
+    background: #eccfad;
+}
+.f-img{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+.f-img img{
+    display: block;
+    margin: auto;
+    height: 50%;
+}
+.f-title, .f-txt{
+    float: left;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    display: none;
+}
+.f-title{
+    margin-top: 5%;
+    font-size: 18px;
+    color: #fff;
+    line-height: 22px;
+}
+.f-txt{
+    margin-top: 5%;
+    line-height: 20px;
+    font-size: 16px;
+    color: #3b3b3b;
+}
+.s-close{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    
+    display: none;
+    z-index: 5;
+}
+.s-active .s-close, .s-active .f-title, .s-active .f-txt{
+    display: block;
+}
+
+.s-close img{
+    height: inherit;
+}
+
+.s-icon{
+    float: left;
+    width: 100%;
+    margin-top: 10%;
+    height: 75px;
+}
+.s-icon img{
+    display: block;
+    margin: auto;
+    height: inherit;
+}
+.s-txt{
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    
+    -webkit-transition: .7s linear;
+    transition: .7s linear;
+}
+.s-active .s-txt{ 
+    font-size: 16px;
+}
+.s-active .s-icon{
+    float: left;
+    width: 100%;
+    height: 50px;
+}
+.s-plus{
+    float: left;
+    width: 100%;
+    margin-top: 5%;
+    height: 25px;
+}
+.s-plus img{
+    display: block;
+    margin: auto;
+    height: inherit;
+}
 .s-map{
     float: left;
     width: 100%;
     
-    padding-top: 50px;
-    padding-bottom: 75px;
+    height: 50vh;
+    min-height: 500px;
+    padding-top: 30vh;
+    padding-bottom: 20vh;
     background: #b9e3f1;
 }
 .s-map h1{
@@ -283,7 +489,8 @@ body{
 }
 .s-map-left img{
     display: inline-block;
-    width: 600px;
+    min-width: 600px;
+    width: 55%;
 }
 .s-map-right{
     float: left;
@@ -328,8 +535,8 @@ body{
     outline: none;
     border: none;
     
-    -webkit-transition: .3s linear;
-    transition: .3s linear;
+    -webkit-transition: .7s linear;
+    transition: .7s linear;
     font-size: 14px;
     font-weight: 600;
 }
@@ -422,4 +629,21 @@ body{
     height: 40px;
     width: 1px;
     background: #1d1d1d;
+}
+
+.d-1{
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+.d-2{
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+.d-3{
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+.d-4{
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
