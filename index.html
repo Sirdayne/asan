@@ -382,18 +382,49 @@
         <h1>НАШИ ПОКУПАТЕЛИ</h1>
            
         <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./img/client-logo.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/client-logo.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/client-logo.png" alt=""></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/client-logo.png" alt=""></div>
+                <div class="swiper-slide"><img src="./img/client-logo.png" alt=""></div>
+                <div class="swiper-slide"><img src="./img/client-logo.png" alt=""></div>
+
+            </div>
+            <!--
+            <div class="swiper-pagination"></div>
+            -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+        <div class="animation">
+            
+            <div class="showcase">
+                <img src="./img/showcase.png" alt="">
+            </div>
+            
+            <div class="buyer"></div>
+            
+            <div class="cashbox">
+                <img src="./img/cashbox.gif" alt="">
+            </div>
+            
+            <div class="table">
+                <div class="table-border">
+                    <div class="table-inner">
+                        <h2>
+                            За <span class="js-sec">0</span><span> секунд</span>, которые вы про-
+                            <br>вели на сайте, у нас купили <span class="js-count">0</span><span>кг</span> макарон
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-1"></div>
+            <div class="table-2"></div>
+            
+            <div class="table-1-s"></div>
+            <div class="table-2-s"></div>
             
         </div>
-        <!--
-        <div class="swiper-pagination"></div>
-        -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
     </section>
       
     <footer class="footer">
@@ -518,71 +549,21 @@
 <script type="text/javascript">
         $(document).ready(function(){ 
             
-            $('.art-slide').eq( 0 ).css('background', 'url(' + $('.art-slide img').eq( 0 ).attr('src') + ')  center center no-repeat');
-            $('.art-slide').eq( 0 ).css('background-size', 'cover');
-                
-            $('.article h2').click(function() {
-
-                var index = $(".article h2").index(this);
-                
-                $('.header-slide').hide();
-                
-                $('.art-slide').hide();
-                
-                console.log( index );
-                
-                var imgSrc = $('.art-slide img').eq( index ).attr('src');
-                
-                $('.art-slide').eq( index ).css('background', 'url(' + imgSrc + ')  center center no-repeat');
-                $('.art-slide').eq( index ).css('background-size', 'cover');
-
-                $('.art-slide').eq( index ).show();
-                
-                $('.dynamic').html( index+1 );
-                
-                $('.slide-nav').removeClass('sd-nav-act');
-                $('.slide-nav').eq( index ).addClass('sd-nav-act');
-            /*
-            },function(){
-                
-                $('.art-slide').hide();
-                
-                $('.header-slide').show();
-                
-                $('.dynamic').html( '0' );
-            */                          
-            });
-        
+            var timer = 0;
+            var count = 1;
             
-            $('.slide-nav').click(function() {
+            window.setInterval(function(){
+                ++timer;
+                
+                if ((timer > count*8.58) == 1)
+                    {
+                        $('.js-count').html(count);
+                        count++;
+                    }
 
-                var indexN = $(".slide-nav").index(this);
+                $('.js-sec').html(timer);
                 
-                $('.header-slide').hide();
-                
-                $('.art-slide').hide();
-                
-                var imgSrc = $('.art-slide img').eq( indexN ).attr('src');
-                
-                $('.art-slide').eq( indexN ).css('background', 'url(' + imgSrc + ')  center center no-repeat');
-                $('.art-slide').eq( indexN ).css('background-size', 'cover');
-
-                $('.art-slide').eq( indexN ).show();
-                
-                $('.dynamic').html( indexN+1 );
-                
-                $('.slide-nav').removeClass('sd-nav-act');
-                $('.slide-nav').eq( indexN ).addClass('sd-nav-act');
-            /*
-            },function(){
-                
-                $('.art-slide').hide();
-                
-                $('.header-slide').show();
-                
-                $('.dynamic').html( '0' );
-            */           
-            });
+            }, 1000);
             
         });
     

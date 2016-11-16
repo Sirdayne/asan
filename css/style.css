@@ -549,7 +549,6 @@ body{
     float: left;
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 100px;
     
     background: #fff;
     color: #303030;
@@ -631,6 +630,144 @@ body{
     background: #1d1d1d;
 }
 
+.animation{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding-top: 150px;
+}
+.showcase{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 282px;
+    width: 222px;
+    
+    z-index: 1;
+}
+.showcase img{
+    height: inherit;
+    width: inherit;
+}
+
+ @keyframes anima {   
+    0%{
+        left: calc(100% - 200px);            
+    }
+    46.153%{
+        left: 150px; 
+    }
+    51.28%{
+        left: 150px; 
+    }
+    97.43%{
+        left: calc(100% - 200px);      
+    }
+    100%{
+        left: calc(100% - 200px);      
+    }
+  }
+
+ @keyframes anima {   
+    0%{
+        left: calc(100% - 200px);            
+    }
+    46.153%{
+        left: 150px; 
+    }
+    51.28%{
+        left: 150px; 
+    }
+    97.43%{
+        left: calc(100% - 200px);      
+    }
+    100%{
+        left: calc(100% - 200px);      
+    }
+  }
+
+.buyer{
+    position: absolute;
+    bottom: -5px;
+    left: calc(100% - 200px);
+    height: 282px;
+    width: 200px;
+    
+    background: url(../img/buyer.gif) center center no-repeat;
+    background-size: cover;
+    
+    animation: anima 8.58s infinite linear;
+    -webkit-animation: anima 8.58s infinite linear;
+    
+    z-index: 2;
+}
+.cashbox{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 282px;
+    width: 200px;
+    
+    z-index: 3;
+}
+.cashbox img{
+    height: inherit;
+    width: inherit;
+}
+
+.table{
+    position: absolute;
+    height: auto;
+    width: 300px;
+    padding: 5px;
+    left: calc( 50% - 150px);
+    bottom: 50px;
+     
+    background: #f1f2f2;
+    z-index: 1;
+}
+.table-border{
+    border: 5px solid #b8deeb;
+}
+.table-inner{
+    background: #f1f2f2;
+    padding: 5px;
+    min-height: 80px;
+}
+.table-inner span{
+    color: #475f93;
+    font-weight: 900;
+}
+.table-inner h2{
+    color: #323232;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.table-1, .table-2{
+    position: absolute;
+    height: 45px;
+    width: 10px;
+    bottom: 0;
+    background: #c9c9c8;
+    
+    z-index: 1;
+}
+.table-1-s, .table-2-s{
+    position: absolute;
+    height: 5px;
+    width: 10px;
+    bottom: 45px;
+    background: #929393;
+    
+    z-index: 1;
+}
+.table-1, .table-1-s{
+    left: calc(50% - 80px);
+}
+.table-2, .table-2-s{
+    left: calc(50% + 75px);
+}
 .d-1{
     -webkit-animation-delay: .1s;
     animation-delay: .1s;
