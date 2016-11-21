@@ -3,6 +3,37 @@
     
 }
 
+@media only screen and (max-height : 900px) {
+    .h-main{
+        top: calc(55% - 300px);
+        width: 200px;
+        left: calc(50% - 100px);
+    }
+    .h-txt-1, .h-txt-2{
+        position: absolute;
+        font-size: 72px;
+        font-weight: bold;
+
+        color: #3b3b3b;
+
+        z-index: 4;
+    }
+    .h-txt-1{
+        top: calc(55% - 250px);
+        right: calc(50% + 75px);
+    }
+    .h-txt-2{
+        top: calc(55% - 150px);
+        left: calc(50% + 65px);
+    }
+    
+    .s-2-right p{
+        font-size: 16px;
+
+    }
+}
+    
+
 @media only screen and (max-height : 600px) {
     
 }

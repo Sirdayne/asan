@@ -1,3 +1,40 @@
+
+ @keyframes anima {   
+    0%{
+        left: calc(100% - 200px);            
+    }
+    46.153%{
+        left: 150px; 
+    }
+    51.28%{
+        left: 150px; 
+    }
+    97.43%{
+        left: calc(100% - 200px);      
+    }
+    100%{
+        left: calc(100% - 200px);      
+    }
+  }
+
+ @keyframes anima {   
+    0%{
+        left: calc(100% - 200px);            
+    }
+    46.153%{
+        left: 150px; 
+    }
+    51.28%{
+        left: 150px; 
+    }
+    97.43%{
+        left: calc(100% - 200px);      
+    }
+    100%{
+        left: calc(100% - 200px);      
+    }
+  }
+
 body{
     float: left;
     width: 100%;
@@ -22,9 +59,9 @@ body{
 
 .h-main{
     position: relative;
-    top: calc(55% - 300px);
-    width: 200px;
-    left: calc(50% - 100px);
+    top: calc(55% - 400px);
+    width: 300px;
+    left: calc(50% - 150px);
     z-index: 5;
 }
 .h-main img{
@@ -32,7 +69,7 @@ body{
 }
 .h-txt-1, .h-txt-2{
     position: absolute;
-    font-size: 72px;
+    font-size: 100px;
     font-weight: bold;
     
     color: #3b3b3b;
@@ -41,11 +78,11 @@ body{
 }
 .h-txt-1{
     top: calc(55% - 250px);
-    right: calc(50% + 75px);
+    right: calc(50% + 120px);
 }
 .h-txt-2{
     top: calc(55% - 150px);
-    left: calc(50% + 65px);
+    left: calc(50% + 100px);
 }
 .sl-img-1, .sl-img-2{
     position: absolute;
@@ -233,8 +270,8 @@ body{
     background: #fc8479;
     height: 50vh;
     min-height: 250px;
-    padding-top: 30vh;
-    padding-bottom: 20vh;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
 }
 .s-2-left, .s-2-right{
     float: left;
@@ -257,8 +294,7 @@ body{
 }
 .s-2-right p{
     margin-top: 75px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 24px;
     
     color: #fff;
 }
@@ -463,8 +499,8 @@ body{
     
     height: 50vh;
     min-height: 500px;
-    padding-top: 30vh;
-    padding-bottom: 20vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
     background: #b9e3f1;
 }
 .s-map h1{
@@ -650,41 +686,6 @@ body{
     width: inherit;
 }
 
- @keyframes anima {   
-    0%{
-        left: calc(100% - 200px);            
-    }
-    46.153%{
-        left: 150px; 
-    }
-    51.28%{
-        left: 150px; 
-    }
-    97.43%{
-        left: calc(100% - 200px);      
-    }
-    100%{
-        left: calc(100% - 200px);      
-    }
-  }
-
- @keyframes anima {   
-    0%{
-        left: calc(100% - 200px);            
-    }
-    46.153%{
-        left: 150px; 
-    }
-    51.28%{
-        left: 150px; 
-    }
-    97.43%{
-        left: calc(100% - 200px);      
-    }
-    100%{
-        left: calc(100% - 200px);      
-    }
-  }
 
 .buyer{
     position: absolute;
@@ -693,13 +694,15 @@ body{
     height: 282px;
     width: 200px;
     
-    background: url(../img/buyer.gif) center center no-repeat;
-    background-size: cover;
-    
+    z-index: 2;
+}
+.buyer-anima{
     animation: anima 8.58s infinite linear;
     -webkit-animation: anima 8.58s infinite linear;
-    
-    z-index: 2;
+}
+.buyer img{
+    height: inherit;
+    width: inherit;
 }
 .cashbox{
     position: absolute;
