@@ -414,7 +414,7 @@
                     <div class="table-inner">
                         <h2>
                             За <span class="js-sec">0</span><span> секунд</span>, которые вы про-
-                            <br>вели на сайте, у нас купили <span class="js-count">0</span><span>кг</span> макарон
+                            <br>вели на сайте, у нас купили <span class="js-count">0</span><span>кг</span> риса камолино
                         </h2>
                     </div>
                 </div>
@@ -442,25 +442,25 @@
             </div>
             
             <div class="foot-part f-1">
-                <a href=""><p>г. Алматы, ул. Мажорова 52</p></a>
-                <a href=""><p>г. Шымкент, ул. Мажорова 52</p></a>
-                <a href=""><p>г. Актобе, ул. Мажорова 52</p></a>
+                <p>г.Алматы п.Боралдай, ул Бостанова 2</p>
+                <p>г.Актобе, 41 разъезд, №134</p>
+                <p>г.Шымкент,  Каратобинское шоссе б/н</p>
             </div>
             
             <div class="foot-line"></div>
             
             <div class="foot-part f-2">
-                <a href=""><p>+7 7272 707040</p></a>
-                <a href=""><p>+7 7272 707040</p></a>
-                <a href=""><p>+7 7272 707040</p></a>
+                <p>+7(727)387-65-60</p>
+                <p>+(7132)98-73-28</p>
+                <p>+7(7282)95-82-42</p>
             </div>
             
             <div class="foot-line"></div>
             
             <div class="foot-part f-3">
-                <a href=""><p>hzpoka@asan.kz</p></a>
-                <a href=""><p>hzpoka@asan.kz</p></a>
-                <a href=""><p>hzpoka@asan.kz</p></a>
+                <p>индекс: 050000</p>
+                <p>индекс: 030011</p>
+                <p>индекс:160000</p>
             </div>
         </div>
     </footer>
@@ -559,6 +559,9 @@
             
             var timer = 0;
             var count = 1;
+            var countTwo = 1;
+            
+            var sliderCondition = 1;
             
             window.setInterval(function(){
                 ++timer;
@@ -571,7 +574,22 @@
 
                 $('.js-sec').html(timer);
                 
+                
+                if ((timer > countTwo*3) == 1){
+                    if( sliderCondition == 1 ){
+                        countTwo++;
+                        $('.h-arrow-right').click();
+                        
+                        sliderCondition = 1;
+                    }
+                }
+                
             }, 1000);
+            
+            
+            $('.h-arrow-right, .h-arrow-left').click(function() {
+                sliderCondition = 0;
+            });
             
         });
     
