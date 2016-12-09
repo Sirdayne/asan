@@ -895,3 +895,257 @@ body{
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
+
+.about-header{
+    float: left;
+    width: 100%;
+    
+    background: #a9c962;
+}
+.a-header-img{
+    float: left;
+    width: 140px;
+    margin-left: 20%;
+}
+.a-header-img img{
+    float: left;
+    width: 140px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.a-header-text{
+    float: left;
+    display: table;
+    width: calc(60% - 190px);
+    height: 384px;
+    margin-right: 20%;
+    margin-left: 50px;
+    
+}
+.a-h-txt{
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+    
+    width: 100%;
+    
+    color: #fff;
+    font-size: 16px;
+}
+.a-h-txt p{
+    margin-top: 25px;
+    width: 100%;
+    
+    color: #fff;
+    font-size: 16px;
+}
+.a-header-text span{
+    font-family: "AgoraSansProBold";
+}
+.a-map{
+    float: left;
+    width: 100%;
+    
+    box-sizing: border-box;
+    
+    background: #f0cd59;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.a-map-text{
+    float: left;
+    width: calc(50% - 50px);
+    margin-right: 50px;
+    height: 475px;
+    
+    display: table;
+}
+.a-map-text p{
+    float: none;
+    
+    display: table-cell;
+    vertical-align: middle;
+    
+    width: 100%;
+    font-size: 16px;
+    color: #4e4733;
+}
+.a-map-img{
+    float: left;
+    width: 50%;
+    
+    margin-top: 100px;
+    margin-bottom: 90px;
+}
+.a-map-img img{
+    float: left;
+    height: 290px;
+}
+.a-advantages{
+    float: left;
+    width: 100%;
+    
+    color: #302f2c;
+    background: #b9e3f1;
+    padding-bottom: 150px;
+}
+.adv-title{
+    float: left;
+    width: 100%;
+    
+    margin-top: 100px;
+    margin-bottom: 50px;
+    
+    text-align: center;
+    font-size: 28px;
+    
+    
+    font-family: "AgoraSansProRegular";
+}
+.adv-row{
+    float: left;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.adv-1{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.adv-1 img{
+    display: inline-block;
+    float: none;
+    width: 150px;
+}
+.adv-1 p{
+    display: inline-block;
+    float: none;
+    width: 230px;
+    font-size: 16px;
+}
+.a-partners{
+    float: left;
+    width: 100%;
+}
+.ap-title{
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
+    
+    color: #fff;
+    font-size: 26px;
+    
+    text-align: center;
+    background: #b9e3f1;
+}
+.ap-row{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.ap-box{
+    float: left;
+    width: 25%;
+    height: 400px;
+    
+    overflow: hidden;
+    
+    position: relative;
+}
+.ap-1{
+    background: #feb692;
+}
+.ap-2{
+    background: #f0cd59;
+}
+.ap-3{
+    background: #d99647;
+}
+.ap-4{
+    background: #a9c962;
+}
+.ap-img{
+    float: left;
+    width: 100%;
+    margin-top: 100px;
+}
+.ap-img img{
+    display: inline-block;
+    height: 120px;
+}
+.ap-text{
+    float: left;
+    width: 100%;
+    margin-top: 25px;
+}
+.ap-text p{
+    display: inline-block;
+    width: 250px;
+    font-size: 25px;
+    font-family: "AgoraSansProBold";
+    color: #303030;
+}
+.ap-hover{
+    position: absolute;
+    
+    top: -400px;
+    left: 0;
+    
+    height: 400px;
+    width: 100%;
+    
+    -webkit-transition: .5s linear;
+    transition: .5s linear;
+    
+    text-align: center;
+    
+    background: inherit;
+}
+.ap-box:hover .ap-hover{
+    top: 0;
+}
+.aph-row{
+    display: inline-block;
+    width: 100%;
+}
+.aph-title{
+    display: inline-block;
+    margin-top: 65px;
+    width: 250px;
+    font-size: 25px;
+    font-family: "AgoraSansProBold";
+    color: #303030;
+}
+.aph-text{
+    display: inline-block;
+    width: 250px;
+    margin-top: 45px;
+    font-size: 16px;
+    color: #303030;
+}
+.aph-button{
+    display: inline-block;
+    
+    margin-top: 45px;
+    
+    padding: 10px 25px;
+    
+    font-size: 17px;
+    
+    outline: none;
+    border: none;
+    
+    background: #fff;
+    color: #303030;
+    
+    -webkit-transition: .4s linear;
+    transition: .4s linear;
+}
+.aph-button:hover{
+    background: #303030;
+    color: #fff;
+}
+
+
